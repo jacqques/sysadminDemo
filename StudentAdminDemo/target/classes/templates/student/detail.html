@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Student details</title>
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/topNav.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="img/kea.png">
+</head>
+<body>
+    <h1 class="mainTitle"> testing testers now. </h1>
+    <div class="topNav">
+        <a href="/">Home</a>
+        <a class="active" href="/student">Students</a>
+        <a href="/courses/">Courses</a>
+    </div>
+    <div class="container">
+        <table>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Enrollment date</th>
+                <th>cpr</th>
+            </tr>
+
+            <tr>
+                <th th:text="${student.getFirstName()}"></th>
+                <th th:text="${student.getLastName()}"></th>
+                <th th:text="${student.getEnrollmentDate()}"></th>
+                <th th:text="${student.getCpr()}"></th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

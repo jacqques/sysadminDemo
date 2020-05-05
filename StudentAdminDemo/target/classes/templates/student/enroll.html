@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enroll student</title>
+    <link rel="stylesheet" href="/css/topNav.css" type="text/css">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <link rel="icon" type="/image/png" href="img/kea.png">
+</head>
+<body>
+<h1 class="mainTitle">Enroll a new student</h1>
+<div class="topNav">
+    <a href="/">Home</a>
+    <a class="active" href="/student">Students</a>
+    <a href="/courses/">Courses</a>
+</div>
+<div class="container">
+
+    <form method="POST" action="/student/enrolled">
+        <table>
+            <tr>
+                <td>First name</td>
+                <td>Last name</td>
+                <td>Enrollment</td>
+                <td>CPR:</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="firstName" id="firstName"></td>
+                <td><input type="text" name="lastName" id="lastName"></td>
+                <td><input type="date" name="enrollmentDate" id="enrollmentDate"></td> <!-- how to make this a date? more inputs so we get yyyy etc?-->
+                <td><input type="text" name="cpr" id="cpr"></td>
+            </tr>
+        </table>
+        <p class="btn"><input type="submit" name="submit"></p>
+    </form>
+
+
+</div>
+
+</body>
+</html>

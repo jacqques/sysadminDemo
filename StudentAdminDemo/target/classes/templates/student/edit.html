@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit students</title>
+    <link rel="stylesheet" href="/css/topNav.css" type="text/css">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <link rel="icon" href="/img/kea.png" type="image/png">
+</head>
+<body>
+<h1 class="mainTitle">Edit students</h1>
+<div class="topNav">
+    <a href="/">Home</a>
+    <a class="active" href="/student">Students</a>
+    <a href="/courses/">Courses</a>
+</div>
+<div class="container">
+
+    <form method="POST" action="/student/editted">
+        <table>
+            <tr></tr>
+                <td> </td>
+                <td>First name</td>
+                <td>Last name</td>
+                <td>Enrollment Date</td>
+                <td>CPR</td>
+            </tr>
+            <tr>
+                <td>Current info</td>
+                <td th:text="${student.getFirstName()}"></td>
+                <td th:text="${student.getLastName()}"></td>
+                <td th:text="${student.getEnrollmentDate()}"></td>
+                <td th:text="${student.getCpr()}"></td>
+            </tr>
+            <tr>
+                <td>new information</td>
+                <td><input type="text" name="firstName" id="firstName"></td>
+                <td><input type="text" name="lastName" id="lastName"></td>
+                <td><input type="date" name="enrollmentDate" id="enrollmentDate"></td>
+                <td><input type="text" name="cpr" id="cpr"></td>
+                <input type="hidden" name="id" id="id" th:value="${student.id}">
+            </tr>
+        </table>
+        <p class="btn"><input type="submit" name="submit"></p>
+    </form>
+
+
+</div>
+
+</body>
+</html>
